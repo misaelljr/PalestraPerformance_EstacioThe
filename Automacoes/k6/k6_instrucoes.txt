@@ -1,0 +1,37 @@
+1 - Baixe o k6: Vá para o site oficial do k6 (https://k6.io/) e faça o download da versão adequada para o seu sistema operacional.
+
+2 - Extraia o arquivo: Após o download, extraia o arquivo compactado para obter o executável do k6.
+
+3 - Configure as variáveis de ambiente (opcional): Adicione o caminho para o executável do k6 às variáveis de ambiente do seu sistema, para que você possa executar o k6 em qualquer diretório no terminal. Por exemplo, no Linux ou macOS, você pode adicionar o seguinte comando ao seu arquivo de perfil (~/.bashrc, ~/.bash_profile, etc.):
+
+export PATH="/caminho/para/o/k6:$PATH"
+
+No Windows, adicione o diretório do executável do k6 ao caminho de sistema nas configurações avançadas do sistema.
+
+4 - Escreva o script de teste: Agora, você pode criar um arquivo de script de teste do k6. O k6 usa JavaScript como linguagem de script, portanto, você pode criar um arquivo com extensão .js e escrever seu código de teste nele. O script de teste pode conter etapas, configurações de usuários virtuais, simulações de carga, asserções e muito mais.
+
+5 - Execute o teste de performance: Abra o terminal ou prompt de comando e navegue até o diretório onde seu arquivo de script de teste está localizado. Execute o seguinte comando para executar o teste de carga:
+
+k6 run seu_teste.js
+
+Isso iniciará o teste de carga usando o script fornecido.
+
+6 - Instale o módulo k6 para geração de relatórios: Abra o terminal ou prompt de comando e execute o seguinte comando para instalar o módulo de relatórios do k6:
+
+npm install -g k6-reporter
+
+7 - Execute o teste de carga com a opção de saída JSON: Ao executar seu teste de carga com o k6, adicione a opção --out json=result.json ao comando para direcionar a saída para um arquivo JSON. Por exemplo:
+
+k6 run seu_teste.js --out json=result.json
+
+8 - Gere o relatório HTML a partir do arquivo JSON: Execute o seguinte comando para gerar o relatório HTML a partir do arquivo JSON gerado no passo anterior:
+
+k6-reporter result.json
+
+Isso gerará um arquivo HTML chamado report.html que contém os gráficos e as estatísticas do teste de carga.
+
+Você pode personalizar ainda mais o relatório HTML gerado pelo k6, incluindo gráficos adicionais, personalizando a aparência e muito mais. Para obter mais informações sobre como personalizar os relatórios do k6, consulte a documentação oficial do k6 (https://k6.io/docs/results-visualization/).
+
+9 - Analise os resultados: Após a conclusão do teste, o k6 fornecerá estatísticas e métricas sobre o desempenho e a carga simulada. Você pode usar essas informações para avaliar o desempenho do seu sistema e identificar possíveis gargalos ou problemas.
+
+O k6 também oferece uma variedade de recursos avançados, como execução distribuída, integração com ferramentas de monitoramento e geração de relatórios. Certifique-se de consultar a documentação oficial do k6 (https://k6.io/docs/) para obter mais detalhes sobre como aproveitar ao máximo essa ferramenta de teste de performance.

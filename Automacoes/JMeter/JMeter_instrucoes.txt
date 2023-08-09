@@ -1,0 +1,38 @@
+1 - Baixe o JMeter: Acesse o site oficial do Apache JMeter (https://jmeter.apache.org/) e baixe a versão mais recente do JMeter de acordo com o seu sistema operacional.
+
+2 - Descompacte o arquivo: Após o download, descompacte o arquivo zip em um diretório de sua escolha.
+
+3 - Execute o JMeter: Navegue até o diretório onde você descompactou o JMeter e abra a pasta "bin". Execute o arquivo "jmeter.bat" (Windows) ou "jmeter.sh" (Linux/Mac) para iniciar o JMeter.
+
+4 - Crie um novo plano de teste: No JMeter, clique com o botão direito do mouse em "Test Plan" (Plano de Teste) no painel de navegação e selecione "Add" -> "Threads (Users)" -> "Thread Group" para adicionar um grupo de threads.
+
+5 - Adicione o plugin Ultimate Thread Group: Para incluir o plugin Ultimate Thread Group, você precisará instalá-lo manualmente. Siga os seguintes passos:
+
+- Baixe o arquivo .jar do plugin Ultimate Thread Group a partir do repositório do JMeter Plugins (https://jmeter-plugins.org/).
+- Copie o arquivo .jar baixado para o diretório "lib/ext" no diretório de instalação do JMeter.
+- Reinicie o JMeter.
+
+6 - Configure o plugin Ultimate Thread Group: Com o grupo de threads selecionado, clique com o botão direito do mouse e selecione "Add" -> "Threads (Users)" -> "Ultimate Thread Group" para adicionar o plugin Ultimate Thread Group ao seu plano de teste.
+
+7 - Configure as propriedades do plugin Ultimate Thread Group de acordo com suas necessidades, como número de threads, duração do teste, ramp-up, etc.
+
+8 - Adicione outros elementos e configurações necessárias ao seu plano de teste, como samplers, ouvintes, assertivas, entre outros.
+
+9 - Salve o plano de teste: Vá em "File" -> "Save Test Plan As" para salvar seu plano de teste com a extensão .jmx em um diretório de sua escolha.
+
+10 - Execute o teste pela interface do JMeter: Clique em "Run" ou pressione o botão verde "Play" para iniciar a execução do seu teste de carga.
+
+11 - Execute o teste por linha de comando (recomendado): Use o comando jmeter seguido do nome do arquivo de plano de teste (.jmx) e as opções desejadas. Por exemplo:
+
+./jmeter -n -t /caminho/para/o/arquivo/plano_de_teste.jmx -l /caminho/para/o/arquivo/relatorio.jtl
+
+Onde:
+
+-n: indica o modo não-GUI, ou seja, execução em modo de linha de comando.
+-t: especifica o caminho para o arquivo de plano de teste (.jmx) que você deseja executar.
+-l: indica o caminho para o arquivo de saída onde o relatório será gerado.
+- /caminho/para/o/arquivo/relatorio.jtl: é o caminho e o nome do arquivo de saída onde o relatório será salvo. Certifique-se de usar a extensão .jtl.
+
+Certifique-se de substituir /caminho/para/o/arquivo/relatorio.jtl pelo caminho correto do arquivo JTL gerado anteriormente e /caminho/para/a/pasta/relatorio_html pelo caminho desejado para a pasta de saída do relatório HTML.
+
+Após a execução do comando, o JMeter irá gerar um relatório HTML com informações detalhadas sobre a execução do teste. Você pode abrir o relatório HTML em um navegador para visualizar os resultados.

@@ -1,0 +1,35 @@
+# Instalação
+
+1 - Verifique se você tem o Python instalado: O Locust.io é uma ferramenta escrita em Python, portanto, certifique-se de ter o Python instalado em seu sistema.
+
+Você pode verificar a versão do Python no terminal: 
+
+python --version 
+
+Se o Python não estiver instalado, baixe e instale a versão mais recente do Python apropriada para o seu sistema operacional a partir do site oficial do Python (https://www.python.org/downloads/).
+
+2 - Instale o Locust.io: Após ter o Python instalado, você pode instalar o Locust.io usando o gerenciador de pacotes Python, o pip. Abra o terminal e execute o seguinte comando:
+
+pip install locust
+
+Isso instalará o Locust.io e suas dependências.
+
+3 - Crie um arquivo de script de teste: O próximo passo é criar um arquivo Python que contém o seu script de teste do Locust. Nesse arquivo, você definirá o comportamento dos usuários virtuais e as tarefas que eles executarão durante o teste de carga. O script pode ter qualquer nome com a extensão .py, por exemplo, meu_teste_locust.py.
+
+4 - Escreva seu script de teste: No arquivo de script de teste, você usará a sintaxe do Locust.io para definir a classe do usuário virtual (User) e as tarefas que ele executará. Você pode configurar as configurações de teste, como número de usuários virtuais, taxa de chegada, tempo de execução, entre outros. Consulte a documentação do Locust.io para obter exemplos e detalhes sobre como escrever seu script de teste.
+
+5 - Inicie o Locust.io: No terminal, navegue até o diretório onde seu arquivo de script de teste está localizado e execute o seguinte comando:
+
+locust -f meu_teste_locust.py
+
+https://petstore.swagger.io/v2
+
+Isso iniciará o servidor Locust.io e fornecerá um URL no qual você poderá acessar a interface web do Locust para configurar e iniciar seus testes de carga.
+
+6 - Acesse a interface web do Locust: Abra um navegador da web e vá para o endereço http://localhost:8089. Você verá a interface web do Locust, onde poderá configurar os parâmetros do teste, iniciar, parar e monitorar o progresso dos testes de carga.
+
+7 - Execute seus testes de performance: Na interface web do Locust, configure o número de usuários virtuais, a taxa de chegada, o tempo de execução e outros parâmetros conforme necessário. Em seguida, clique no botão "Start Swarming" para iniciar os testes de carga.
+
+O Locust.io irá gerar solicitações simuladas dos usuários virtuais definidos em seu script de teste, permitindo que você avalie o desempenho e a capacidade do sistema testado.
+
+Certifique-se de consultar a documentação oficial do Locust.io (https://locust.io/) para obter informações detalhadas sobre a sintaxe, recursos avançados e melhores práticas de uso do Locust.io em seus testes de carga.
